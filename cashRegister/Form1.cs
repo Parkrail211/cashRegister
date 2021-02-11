@@ -14,6 +14,9 @@ namespace cashRegister
 {
     public partial class cashRegister : Form
     {
+
+        // Glabal Variables
+
         double item1Price = 5;
         double item2Price = 2.5;
         double item3Price = 3;
@@ -24,6 +27,9 @@ namespace cashRegister
         double itemsTotal;
         double tendered;
         double change;
+
+        //sets up printing sound effect
+
         SoundPlayer Print = new SoundPlayer(Properties.Resources.typewriter_2);
 
 
@@ -37,9 +43,13 @@ namespace cashRegister
 
             try
             {
+                //shows text feild and hides error message
+
                 subtotalLabelLeft.Visible = true;
                 subtotalLabelRight.Visible = true;
                 errorLabel.Visible = false;
+
+                //takes value from text boxes
 
                 item1Amount = Convert.ToInt16(item1Box.Text);
                 item2Amount = Convert.ToInt16(item2Box.Text);
@@ -47,6 +57,7 @@ namespace cashRegister
 
                 itemsTotal = (item1Price * item1Amount) + (item2Price * item2Amount) + (item3Price * item3Amount);
 
+                //prints info
 
                 subtotalLabelLeft.Text = $"Sub Total:";
                 subtotalLabelLeft.Text += $"\n\nTax:";
@@ -59,6 +70,8 @@ namespace cashRegister
             }
             catch
             {
+                //shows error message
+
                 errorLabel.Visible = true;
             }
 
@@ -70,28 +83,38 @@ namespace cashRegister
         {
             try
             {
+                //shows text field and hides error message
+
                 changeBoxLeft.Visible = true;
                 changeBoxRight.Visible = true;
                 errorLabel.Visible = false;
 
+                //gets value from text box
+
                 tendered = Convert.ToDouble(tenderedBox.Text);
                 change = tendered - (itemsTotal * hst + itemsTotal);
+
+                //prints info
 
                 changeBoxLeft.Text = $"Change:";
                 changeBoxRight.Text = $"{change.ToString("C")}";
             }
             catch
             {
+                //shows error message
+
                 errorLabel.Visible = true;
             }
         }
 
         private void recieptButton_Click(object sender, EventArgs e)
         {
+            //shows receipt box
             receiptSideLabel.Visible = true;
             receiptLabel.Visible = true;
             receiptLabelRight.Visible = true;
 
+            //prints with sound
             Print.Play();
             receiptLabel.Text = $"\n\nBurritos  x{item1Amount} @";
             receiptLabelRight.Text = $"\n\n{item1Price.ToString("C")}";
@@ -188,13 +211,9 @@ namespace cashRegister
 
         }
 
-        private void receiptLabelRight_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void newOrderButton_Click(object sender, EventArgs e)
         {
+            //resets variables
             item1Amount = 0;
             item2Amount = 0;
             item3Amount = 0;
@@ -202,6 +221,7 @@ namespace cashRegister
             tendered = 0;
             change = 0;
 
+            //hides text fields and receipt box
             receiptLabel.Visible = false;
             receiptLabelRight.Visible = false;
             receiptSideLabel.Visible = false;
@@ -211,12 +231,14 @@ namespace cashRegister
             changeBoxRight.Visible = false;
             barLabel.Visible = false;
 
+            //resets text boxes
             item1Box.Text = "0";
             item2Box.Text = "0";
             item3Box.Text = "0";
             tenderedBox.Text = "0";
         }
 
+        //plus and minus buttons for text boxes
         private void item1Plus_Click(object sender, EventArgs e)
         {
             int itemBox1Amount = Convert.ToInt16(item1Box.Text);
@@ -273,29 +295,6 @@ namespace cashRegister
             tenderedBox.Text = Convert.ToString(tenderedBoxAmount);
         }
 
-        private void receiptSideLabel_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void errorLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void item3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cashRegister_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void item1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

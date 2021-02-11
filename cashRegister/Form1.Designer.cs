@@ -63,6 +63,7 @@ namespace cashRegister
             // 
             // item1
             // 
+            this.item1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.item1.AutoSize = true;
             this.item1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.item1.Location = new System.Drawing.Point(25, 40);
@@ -70,26 +71,31 @@ namespace cashRegister
             this.item1.Size = new System.Drawing.Size(98, 24);
             this.item1.TabIndex = 0;
             this.item1.Text = "Burritos $5";
-            this.item1.Click += new System.EventHandler(this.item1_Click);
+    
             // 
             // item1Box
             // 
+            this.item1Box.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.item1Box.Location = new System.Drawing.Point(136, 40);
             this.item1Box.Name = "item1Box";
             this.item1Box.Size = new System.Drawing.Size(32, 20);
             this.item1Box.TabIndex = 1;
             this.item1Box.Text = "0";
+
             // 
             // item2Box
             // 
+            this.item2Box.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.item2Box.Location = new System.Drawing.Point(136, 82);
             this.item2Box.Name = "item2Box";
             this.item2Box.Size = new System.Drawing.Size(32, 20);
             this.item2Box.TabIndex = 3;
             this.item2Box.Text = "0";
+
             // 
             // item2
             // 
+            this.item2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.item2.AutoSize = true;
             this.item2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.item2.Location = new System.Drawing.Point(18, 82);
@@ -97,17 +103,21 @@ namespace cashRegister
             this.item2.Size = new System.Drawing.Size(112, 24);
             this.item2.TabIndex = 2;
             this.item2.Text = "Tacos $2.50";
+
             // 
             // item3Box
             // 
+            this.item3Box.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.item3Box.Location = new System.Drawing.Point(136, 125);
             this.item3Box.Name = "item3Box";
             this.item3Box.Size = new System.Drawing.Size(32, 20);
             this.item3Box.TabIndex = 5;
             this.item3Box.Text = "0";
+
             // 
             // item3
             // 
+            this.item3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.item3.AutoSize = true;
             this.item3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.item3.Location = new System.Drawing.Point(25, 125);
@@ -115,10 +125,11 @@ namespace cashRegister
             this.item3.Size = new System.Drawing.Size(100, 24);
             this.item3.TabIndex = 4;
             this.item3.Text = "Nachos $3";
-            this.item3.Click += new System.EventHandler(this.item3_Click);
+
             // 
             // totalButton
             // 
+            this.totalButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.totalButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.totalButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.totalButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -133,39 +144,48 @@ namespace cashRegister
             // 
             // subtotalLabelLeft
             // 
+            this.subtotalLabelLeft.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.subtotalLabelLeft.Location = new System.Drawing.Point(26, 207);
             this.subtotalLabelLeft.Name = "subtotalLabelLeft";
             this.subtotalLabelLeft.Size = new System.Drawing.Size(87, 131);
             this.subtotalLabelLeft.TabIndex = 7;
+
             // 
             // barLabel
             // 
+            this.barLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.barLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.barLabel.Location = new System.Drawing.Point(9, 285);
             this.barLabel.Name = "barLabel";
             this.barLabel.Size = new System.Drawing.Size(201, 10);
             this.barLabel.TabIndex = 8;
             this.barLabel.Visible = false;
+   
             // 
             // subtotalLabelRight
             // 
+            this.subtotalLabelRight.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.subtotalLabelRight.BackColor = System.Drawing.Color.Transparent;
             this.subtotalLabelRight.Location = new System.Drawing.Point(109, 207);
             this.subtotalLabelRight.Name = "subtotalLabelRight";
             this.subtotalLabelRight.Size = new System.Drawing.Size(87, 78);
             this.subtotalLabelRight.TabIndex = 9;
             this.subtotalLabelRight.TextAlign = System.Drawing.ContentAlignment.TopRight;
+ 
             // 
             // tenderedBox
             // 
+            this.tenderedBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tenderedBox.Location = new System.Drawing.Point(136, 318);
             this.tenderedBox.Name = "tenderedBox";
             this.tenderedBox.Size = new System.Drawing.Size(32, 20);
             this.tenderedBox.TabIndex = 11;
             this.tenderedBox.Text = "0";
+     
             // 
             // tenderedLabel
             // 
+            this.tenderedLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tenderedLabel.AutoSize = true;
             this.tenderedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tenderedLabel.Location = new System.Drawing.Point(25, 314);
@@ -173,9 +193,11 @@ namespace cashRegister
             this.tenderedLabel.Size = new System.Drawing.Size(94, 24);
             this.tenderedLabel.TabIndex = 10;
             this.tenderedLabel.Text = "Tendered";
+
             // 
             // changeButton
             // 
+            this.changeButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.changeButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.changeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.changeButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -190,6 +212,7 @@ namespace cashRegister
             // 
             // changeBoxLeft
             // 
+            this.changeBoxLeft.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.changeBoxLeft.Location = new System.Drawing.Point(26, 395);
             this.changeBoxLeft.Name = "changeBoxLeft";
             this.changeBoxLeft.Size = new System.Drawing.Size(87, 131);
@@ -197,6 +220,7 @@ namespace cashRegister
             // 
             // changeBoxRight
             // 
+            this.changeBoxRight.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.changeBoxRight.Location = new System.Drawing.Point(109, 395);
             this.changeBoxRight.Name = "changeBoxRight";
             this.changeBoxRight.Size = new System.Drawing.Size(87, 131);
@@ -205,6 +229,7 @@ namespace cashRegister
             // 
             // receiptLabel
             // 
+            this.receiptLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.receiptLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.receiptLabel.Location = new System.Drawing.Point(299, 39);
             this.receiptLabel.Name = "receiptLabel";
@@ -215,6 +240,7 @@ namespace cashRegister
             // 
             // recieptButton
             // 
+            this.recieptButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.recieptButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.recieptButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.recieptButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -229,6 +255,7 @@ namespace cashRegister
             // 
             // receiptLabelRight
             // 
+            this.receiptLabelRight.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.receiptLabelRight.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.receiptLabelRight.Location = new System.Drawing.Point(401, 39);
             this.receiptLabelRight.Name = "receiptLabelRight";
@@ -236,10 +263,10 @@ namespace cashRegister
             this.receiptLabelRight.TabIndex = 17;
             this.receiptLabelRight.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.receiptLabelRight.Visible = false;
-            this.receiptLabelRight.Click += new System.EventHandler(this.receiptLabelRight_Click);
             // 
             // receiptSideLabel
             // 
+            this.receiptSideLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.receiptSideLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.receiptSideLabel.Location = new System.Drawing.Point(284, 39);
             this.receiptSideLabel.Name = "receiptSideLabel";
@@ -247,10 +274,10 @@ namespace cashRegister
             this.receiptSideLabel.TabIndex = 18;
             this.receiptSideLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.receiptSideLabel.Visible = false;
-            this.receiptSideLabel.Click += new System.EventHandler(this.receiptSideLabel_Click);
             // 
             // newOrderButton
             // 
+            this.newOrderButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.newOrderButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.newOrderButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.newOrderButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -265,6 +292,7 @@ namespace cashRegister
             // 
             // item1Plus
             // 
+            this.item1Plus.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.item1Plus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.item1Plus.Location = new System.Drawing.Point(164, 40);
             this.item1Plus.Name = "item1Plus";
@@ -276,6 +304,7 @@ namespace cashRegister
             // 
             // item1Minus
             // 
+            this.item1Minus.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.item1Minus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.item1Minus.Location = new System.Drawing.Point(174, 40);
             this.item1Minus.Name = "item1Minus";
@@ -287,6 +316,7 @@ namespace cashRegister
             // 
             // item2Minus
             // 
+            this.item2Minus.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.item2Minus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.item2Minus.Location = new System.Drawing.Point(174, 82);
             this.item2Minus.Name = "item2Minus";
@@ -298,6 +328,7 @@ namespace cashRegister
             // 
             // Item2Plus
             // 
+            this.Item2Plus.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Item2Plus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Item2Plus.Location = new System.Drawing.Point(164, 82);
             this.Item2Plus.Name = "Item2Plus";
@@ -309,6 +340,7 @@ namespace cashRegister
             // 
             // item3Minus
             // 
+            this.item3Minus.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.item3Minus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.item3Minus.Location = new System.Drawing.Point(174, 125);
             this.item3Minus.Name = "item3Minus";
@@ -320,6 +352,7 @@ namespace cashRegister
             // 
             // item3Plus
             // 
+            this.item3Plus.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.item3Plus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.item3Plus.Location = new System.Drawing.Point(164, 125);
             this.item3Plus.Name = "item3Plus";
@@ -331,6 +364,7 @@ namespace cashRegister
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(174, 318);
             this.button1.Name = "button1";
@@ -342,6 +376,7 @@ namespace cashRegister
             // 
             // button2
             // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(164, 318);
             this.button2.Name = "button2";
@@ -353,6 +388,7 @@ namespace cashRegister
             // 
             // errorLabel
             // 
+            this.errorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.errorLabel.AutoSize = true;
             this.errorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.errorLabel.ForeColor = System.Drawing.Color.Red;
@@ -362,7 +398,6 @@ namespace cashRegister
             this.errorLabel.TabIndex = 28;
             this.errorLabel.Text = "Please input proper amounts.";
             this.errorLabel.Visible = false;
-            this.errorLabel.Click += new System.EventHandler(this.errorLabel_Click);
             // 
             // cashRegister
             // 
@@ -402,7 +437,6 @@ namespace cashRegister
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "cashRegister";
             this.Text = "Restaurante de Gran P";
-            this.Load += new System.EventHandler(this.cashRegister_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
