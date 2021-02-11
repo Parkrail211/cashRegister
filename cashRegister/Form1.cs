@@ -13,6 +13,8 @@ using System.Media;
 /* Parker Railton
  * ICU3U
  * Mr.T
+ * 
+ * This program is a cash register for a shop that sells burritos tacos and nachos. it calculates subtotal, tax, total, and change, it then displays it on a "receipt."
  * */
 
 namespace cashRegister
