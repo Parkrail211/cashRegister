@@ -58,6 +58,7 @@ namespace cashRegister
             this.item3Plus = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.errorLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // item1
@@ -224,9 +225,9 @@ namespace cashRegister
             // receiptLabelRight
             // 
             this.receiptLabelRight.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.receiptLabelRight.Location = new System.Drawing.Point(414, 40);
+            this.receiptLabelRight.Location = new System.Drawing.Point(401, 39);
             this.receiptLabelRight.Name = "receiptLabelRight";
-            this.receiptLabelRight.Size = new System.Drawing.Size(49, 338);
+            this.receiptLabelRight.Size = new System.Drawing.Size(63, 338);
             this.receiptLabelRight.TabIndex = 17;
             this.receiptLabelRight.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.receiptLabelRight.Visible = false;
@@ -344,11 +345,24 @@ namespace cashRegister
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // errorLabel
+            // 
+            this.errorLabel.AutoSize = true;
+            this.errorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorLabel.ForeColor = System.Drawing.Color.Red;
+            this.errorLabel.Location = new System.Drawing.Point(298, 9);
+            this.errorLabel.Name = "errorLabel";
+            this.errorLabel.Size = new System.Drawing.Size(166, 20);
+            this.errorLabel.TabIndex = 28;
+            this.errorLabel.Text = "Please input numbers.";
+            this.errorLabel.Visible = false;
+            // 
             // cashRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(512, 462);
+            this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.item3Minus);
@@ -379,7 +393,7 @@ namespace cashRegister
             this.Controls.Add(this.item1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "cashRegister";
-            this.Text = "Restaurante de Big P";
+            this.Text = "Restaurante de Gran P";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -415,6 +429,7 @@ namespace cashRegister
         private System.Windows.Forms.Button item3Plus;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label errorLabel;
     }
 }
 

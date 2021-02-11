@@ -39,6 +39,7 @@ namespace cashRegister
             {
                 subtotalLabelLeft.Visible = true;
                 subtotalLabelRight.Visible = true;
+                errorLabel.Visible = false;
 
                 item1Amount = Convert.ToInt16(item1Box.Text);
                 item2Amount = Convert.ToInt16(item2Box.Text);
@@ -58,7 +59,7 @@ namespace cashRegister
             }
             catch
             {
-                subtotalLabelLeft.Text = "whoops";
+                errorLabel.Visible = true;
             }
 
         }
@@ -71,6 +72,7 @@ namespace cashRegister
             {
                 changeBoxLeft.Visible = true;
                 changeBoxRight.Visible = true;
+                errorLabel.Visible = false;
 
                 tendered = Convert.ToDouble(tenderedBox.Text);
                 change = tendered - (itemsTotal * hst + itemsTotal);
@@ -80,7 +82,7 @@ namespace cashRegister
             }
             catch
             {
-                changeBoxLeft.Text = "Whoops";
+                errorLabel.Visible = true;
             }
         }
 
