@@ -65,10 +65,11 @@ namespace cashRegister
             this.item1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.item1.AutoSize = true;
             this.item1.BackColor = System.Drawing.Color.White;
+            this.item1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.item1.Location = new System.Drawing.Point(25, 40);
             this.item1.Name = "item1";
-            this.item1.Size = new System.Drawing.Size(98, 24);
+            this.item1.Size = new System.Drawing.Size(100, 26);
             this.item1.TabIndex = 0;
             this.item1.Text = "Burritos $5";
             // 
@@ -95,10 +96,11 @@ namespace cashRegister
             this.item2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.item2.AutoSize = true;
             this.item2.BackColor = System.Drawing.Color.White;
+            this.item2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.item2.Location = new System.Drawing.Point(18, 82);
             this.item2.Name = "item2";
-            this.item2.Size = new System.Drawing.Size(112, 24);
+            this.item2.Size = new System.Drawing.Size(114, 26);
             this.item2.TabIndex = 2;
             this.item2.Text = "Tacos $2.50";
             // 
@@ -116,10 +118,11 @@ namespace cashRegister
             this.item3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.item3.AutoSize = true;
             this.item3.BackColor = System.Drawing.Color.White;
+            this.item3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.item3.Location = new System.Drawing.Point(25, 125);
             this.item3.Name = "item3";
-            this.item3.Size = new System.Drawing.Size(100, 24);
+            this.item3.Size = new System.Drawing.Size(102, 26);
             this.item3.TabIndex = 4;
             this.item3.Text = "Nachos $3";
             // 
@@ -173,10 +176,11 @@ namespace cashRegister
             this.tenderedLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tenderedLabel.AutoSize = true;
             this.tenderedLabel.BackColor = System.Drawing.Color.White;
+            this.tenderedLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tenderedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tenderedLabel.Location = new System.Drawing.Point(25, 314);
             this.tenderedLabel.Name = "tenderedLabel";
-            this.tenderedLabel.Size = new System.Drawing.Size(94, 24);
+            this.tenderedLabel.Size = new System.Drawing.Size(96, 26);
             this.tenderedLabel.TabIndex = 10;
             this.tenderedLabel.Text = "Tendered";
             // 
