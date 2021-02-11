@@ -1,7 +1,7 @@
 ﻿
 namespace cashRegister
 {
-    partial class Form1
+    partial class cashRegister
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@ namespace cashRegister
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cashRegister));
             this.item1 = new System.Windows.Forms.Label();
             this.item1Box = new System.Windows.Forms.TextBox();
             this.item2Box = new System.Windows.Forms.TextBox();
@@ -49,17 +50,25 @@ namespace cashRegister
             this.receiptLabelRight = new System.Windows.Forms.Label();
             this.receiptSideLabel = new System.Windows.Forms.Label();
             this.newOrderButton = new System.Windows.Forms.Button();
+            this.item1Plus = new System.Windows.Forms.Button();
+            this.item1Minus = new System.Windows.Forms.Button();
+            this.item2Minus = new System.Windows.Forms.Button();
+            this.Item2Plus = new System.Windows.Forms.Button();
+            this.item3Minus = new System.Windows.Forms.Button();
+            this.item3Plus = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // item1
             // 
             this.item1.AutoSize = true;
             this.item1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.item1.Location = new System.Drawing.Point(53, 40);
+            this.item1.Location = new System.Drawing.Point(46, 40);
             this.item1.Name = "item1";
-            this.item1.Size = new System.Drawing.Size(60, 24);
+            this.item1.Size = new System.Drawing.Size(73, 24);
             this.item1.TabIndex = 0;
-            this.item1.Text = "Item 1";
+            this.item1.Text = "Burritos";
             // 
             // item1Box
             // 
@@ -81,11 +90,11 @@ namespace cashRegister
             // 
             this.item2.AutoSize = true;
             this.item2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.item2.Location = new System.Drawing.Point(53, 82);
+            this.item2.Location = new System.Drawing.Point(51, 82);
             this.item2.Name = "item2";
-            this.item2.Size = new System.Drawing.Size(60, 24);
+            this.item2.Size = new System.Drawing.Size(62, 24);
             this.item2.TabIndex = 2;
-            this.item2.Text = "Item 2";
+            this.item2.Text = "Tacos";
             // 
             // item3Box
             // 
@@ -99,11 +108,11 @@ namespace cashRegister
             // 
             this.item3.AutoSize = true;
             this.item3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.item3.Location = new System.Drawing.Point(53, 125);
+            this.item3.Location = new System.Drawing.Point(42, 125);
             this.item3.Name = "item3";
-            this.item3.Size = new System.Drawing.Size(60, 24);
+            this.item3.Size = new System.Drawing.Size(75, 24);
             this.item3.TabIndex = 4;
-            this.item3.Text = "Item 3";
+            this.item3.Text = "Nachos";
             // 
             // totalButton
             // 
@@ -192,9 +201,9 @@ namespace cashRegister
             // receiptLabel
             // 
             this.receiptLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.receiptLabel.Location = new System.Drawing.Point(327, 40);
+            this.receiptLabel.Location = new System.Drawing.Point(299, 39);
             this.receiptLabel.Name = "receiptLabel";
-            this.receiptLabel.Size = new System.Drawing.Size(153, 339);
+            this.receiptLabel.Size = new System.Drawing.Size(178, 339);
             this.receiptLabel.TabIndex = 15;
             this.receiptLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.receiptLabel.Visible = false;
@@ -226,12 +235,13 @@ namespace cashRegister
             // receiptSideLabel
             // 
             this.receiptSideLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.receiptSideLabel.Location = new System.Drawing.Point(281, 40);
+            this.receiptSideLabel.Location = new System.Drawing.Point(284, 39);
             this.receiptSideLabel.Name = "receiptSideLabel";
-            this.receiptSideLabel.Size = new System.Drawing.Size(49, 338);
+            this.receiptSideLabel.Size = new System.Drawing.Size(18, 338);
             this.receiptSideLabel.TabIndex = 18;
             this.receiptSideLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.receiptSideLabel.Visible = false;
+            this.receiptSideLabel.Click += new System.EventHandler(this.receiptSideLabel_Click);
             // 
             // newOrderButton
             // 
@@ -246,11 +256,107 @@ namespace cashRegister
             this.newOrderButton.UseVisualStyleBackColor = true;
             this.newOrderButton.Click += new System.EventHandler(this.newOrderButton_Click);
             // 
-            // Form1
+            // item1Plus
+            // 
+            this.item1Plus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.item1Plus.Location = new System.Drawing.Point(164, 40);
+            this.item1Plus.Name = "item1Plus";
+            this.item1Plus.Size = new System.Drawing.Size(12, 20);
+            this.item1Plus.TabIndex = 20;
+            this.item1Plus.Text = "+";
+            this.item1Plus.UseVisualStyleBackColor = true;
+            this.item1Plus.Click += new System.EventHandler(this.item1Plus_Click);
+            // 
+            // item1Minus
+            // 
+            this.item1Minus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.item1Minus.Location = new System.Drawing.Point(174, 40);
+            this.item1Minus.Name = "item1Minus";
+            this.item1Minus.Size = new System.Drawing.Size(12, 20);
+            this.item1Minus.TabIndex = 21;
+            this.item1Minus.Text = "−";
+            this.item1Minus.UseVisualStyleBackColor = true;
+            this.item1Minus.Click += new System.EventHandler(this.item1Minus_Click);
+            // 
+            // item2Minus
+            // 
+            this.item2Minus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.item2Minus.Location = new System.Drawing.Point(174, 82);
+            this.item2Minus.Name = "item2Minus";
+            this.item2Minus.Size = new System.Drawing.Size(12, 20);
+            this.item2Minus.TabIndex = 23;
+            this.item2Minus.Text = "−";
+            this.item2Minus.UseVisualStyleBackColor = true;
+            this.item2Minus.Click += new System.EventHandler(this.item2Minus_Click);
+            // 
+            // Item2Plus
+            // 
+            this.Item2Plus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Item2Plus.Location = new System.Drawing.Point(164, 82);
+            this.Item2Plus.Name = "Item2Plus";
+            this.Item2Plus.Size = new System.Drawing.Size(12, 20);
+            this.Item2Plus.TabIndex = 22;
+            this.Item2Plus.Text = "+";
+            this.Item2Plus.UseVisualStyleBackColor = true;
+            this.Item2Plus.Click += new System.EventHandler(this.Item2Plus_Click);
+            // 
+            // item3Minus
+            // 
+            this.item3Minus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.item3Minus.Location = new System.Drawing.Point(174, 125);
+            this.item3Minus.Name = "item3Minus";
+            this.item3Minus.Size = new System.Drawing.Size(12, 20);
+            this.item3Minus.TabIndex = 25;
+            this.item3Minus.Text = "−";
+            this.item3Minus.UseVisualStyleBackColor = true;
+            this.item3Minus.Click += new System.EventHandler(this.item3Minus_Click);
+            // 
+            // item3Plus
+            // 
+            this.item3Plus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.item3Plus.Location = new System.Drawing.Point(164, 125);
+            this.item3Plus.Name = "item3Plus";
+            this.item3Plus.Size = new System.Drawing.Size(12, 20);
+            this.item3Plus.TabIndex = 24;
+            this.item3Plus.Text = "+";
+            this.item3Plus.UseVisualStyleBackColor = true;
+            this.item3Plus.Click += new System.EventHandler(this.item3Plus_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(174, 318);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(12, 20);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "−";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(164, 318);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(12, 20);
+            this.button2.TabIndex = 26;
+            this.button2.Text = "+";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // cashRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(512, 462);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.item3Minus);
+            this.Controls.Add(this.item3Plus);
+            this.Controls.Add(this.item2Minus);
+            this.Controls.Add(this.Item2Plus);
+            this.Controls.Add(this.item1Minus);
+            this.Controls.Add(this.item1Plus);
             this.Controls.Add(this.newOrderButton);
             this.Controls.Add(this.receiptSideLabel);
             this.Controls.Add(this.receiptLabelRight);
@@ -271,8 +377,9 @@ namespace cashRegister
             this.Controls.Add(this.item2);
             this.Controls.Add(this.item1Box);
             this.Controls.Add(this.item1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "cashRegister";
+            this.Text = "Restaurante de Big P";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,6 +407,14 @@ namespace cashRegister
         private System.Windows.Forms.Label receiptLabelRight;
         private System.Windows.Forms.Label receiptSideLabel;
         private System.Windows.Forms.Button newOrderButton;
+        private System.Windows.Forms.Button item1Plus;
+        private System.Windows.Forms.Button item1Minus;
+        private System.Windows.Forms.Button item2Minus;
+        private System.Windows.Forms.Button Item2Plus;
+        private System.Windows.Forms.Button item3Minus;
+        private System.Windows.Forms.Button item3Plus;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

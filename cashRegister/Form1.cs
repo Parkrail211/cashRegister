@@ -12,11 +12,11 @@ using System.Media;
 
 namespace cashRegister
 {
-    public partial class Form1 : Form
+    public partial class cashRegister : Form
     {
         double item1Price = 5;
         double item2Price = 2.5;
-        double item3Price = 10;
+        double item3Price = 3;
         int item1Amount;
         int item2Amount;
         int item3Amount;
@@ -27,7 +27,7 @@ namespace cashRegister
         SoundPlayer Print = new SoundPlayer(Properties.Resources.typewriter_2);
 
 
-        public Form1()
+        public cashRegister()
         {
             InitializeComponent();
         }
@@ -91,21 +91,21 @@ namespace cashRegister
             receiptLabelRight.Visible = true;
 
             Print.Play();
-            receiptLabel.Text = $"\n\nItem 1  x{item1Amount} @";
+            receiptLabel.Text = $"\n\nBurritos  x{item1Amount} @";
             receiptLabelRight.Text = $"\n\n{item1Price.ToString("C")}";
 
             Refresh();
             Thread.Sleep(500);
 
             Print.Play();
-            receiptLabel.Text += $"\n\nItem 2  x{item2Amount} @";
+            receiptLabel.Text += $"\n\nTacos  x{item2Amount} @";
             receiptLabelRight.Text += $"\n\n{item2Price.ToString("C")}";
 
             Refresh();
             Thread.Sleep(500);
 
             Print.Play();
-            receiptLabel.Text += $"\n\nItem 3  x{item3Amount} @";
+            receiptLabel.Text += $"\n\nNachos  x{item3Amount} @";
             receiptLabelRight.Text += $"\n\n{item3Price.ToString("C")}";
 
             Refresh();
@@ -213,6 +213,67 @@ namespace cashRegister
             item2Box.Text = "0";
             item3Box.Text = "0";
             tenderedBox.Text = "0";
+        }
+
+        private void item1Plus_Click(object sender, EventArgs e)
+        {
+            int itemBox1Amount = Convert.ToInt16(item1Box.Text);
+            itemBox1Amount++;
+            item1Box.Text = Convert.ToString(itemBox1Amount);
+        }
+
+        private void item1Minus_Click(object sender, EventArgs e)
+        {
+            int itemBox1Amount = Convert.ToInt16(item1Box.Text);
+            itemBox1Amount--;
+            item1Box.Text = Convert.ToString(itemBox1Amount);
+        }
+
+        private void item2Minus_Click(object sender, EventArgs e)
+        {
+            int itemBox2Amount = Convert.ToInt16(item2Box.Text);
+            itemBox2Amount--;
+            item2Box.Text = Convert.ToString(itemBox2Amount);
+        }
+
+        private void Item2Plus_Click(object sender, EventArgs e)
+        {
+            int itemBox2Amount = Convert.ToInt16(item2Box.Text);
+            itemBox2Amount++;
+            item2Box.Text = Convert.ToString(itemBox2Amount);
+        }
+
+        private void item3Plus_Click(object sender, EventArgs e)
+        {
+            int itemBox3Amount = Convert.ToInt16(item3Box.Text);
+            itemBox3Amount++;
+            item3Box.Text = Convert.ToString(itemBox3Amount);
+        }
+
+        private void item3Minus_Click(object sender, EventArgs e)
+        {
+            int itemBox3Amount = Convert.ToInt16(item3Box.Text);
+            itemBox3Amount--;
+            item3Box.Text = Convert.ToString(itemBox3Amount);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int tenderedBoxAmount = Convert.ToInt16(tenderedBox.Text);
+            tenderedBoxAmount++;
+            tenderedBox.Text = Convert.ToString(tenderedBoxAmount);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int tenderedBoxAmount = Convert.ToInt16(tenderedBox.Text);
+            tenderedBoxAmount--;
+            tenderedBox.Text = Convert.ToString(tenderedBoxAmount);
+        }
+
+        private void receiptSideLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
