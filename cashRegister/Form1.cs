@@ -66,7 +66,6 @@ namespace cashRegister
                 subtotalLabelRight.Text = $"{itemsTotal.ToString("C")}";
                 subtotalLabelRight.Text += $"\n\n{(itemsTotal * hst).ToString("C")}";
                 subtotalLabelRight.Text += $"\n\n{(itemsTotal * hst + itemsTotal).ToString("C")}";
-                barLabel.Visible = true;
             }
             catch
             {
@@ -229,7 +228,7 @@ namespace cashRegister
             subtotalLabelRight.Visible = false;
             changeBoxLeft.Visible = false;
             changeBoxRight.Visible = false;
-            barLabel.Visible = false;
+    
 
             //resets text boxes
             item1Box.Text = "0";
