@@ -32,6 +32,7 @@ namespace cashRegister
         double itemsTotal;
         double tendered = 0;
         double change;
+        bool printing = false;
 
         //sets up printing sound effect
 
@@ -111,116 +112,122 @@ namespace cashRegister
             }
         }
 
+
+
         private void recieptButton_Click(object sender, EventArgs e)
         {
+
+            
             //shows receipt box
             receiptSideLabel.Visible = true;
-            receiptLabel.Visible = true;
-            receiptLabelRight.Visible = true;
+                receiptLabel.Visible = true;
+                receiptLabelRight.Visible = true;
 
-            //prints with sound
-            Print.Play();
-            receiptLabel.Text = $"\n\nBurritos  x{item1Amount} @";
-            receiptLabelRight.Text = $"\n\n{item1Price.ToString("C")}";
+                //prints with sound
+                Print.Play();
+                receiptLabel.Text = $"\n\nBurritos  x{item1Amount} @";
+                receiptLabelRight.Text = $"\n\n{item1Price.ToString("C")}";
 
-            Refresh();
-            Thread.Sleep(500);
+                Refresh();
+                Thread.Sleep(500);
 
-            Print.Play();
-            receiptLabel.Text += $"\n\nTacos  x{item2Amount} @";
-            receiptLabelRight.Text += $"\n\n{item2Price.ToString("C")}";
+                Print.Play();
+                receiptLabel.Text += $"\n\nTacos  x{item2Amount} @";
+                receiptLabelRight.Text += $"\n\n{item2Price.ToString("C")}";
 
-            Refresh();
-            Thread.Sleep(500);
+                Refresh();
+                Thread.Sleep(500);
 
-            Print.Play();
-            receiptLabel.Text += $"\n\nNachos  x{item3Amount} @";
-            receiptLabelRight.Text += $"\n\n{item3Price.ToString("C")}";
+                Print.Play();
+                receiptLabel.Text += $"\n\nNachos  x{item3Amount} @";
+                receiptLabelRight.Text += $"\n\n{item3Price.ToString("C")}";
 
-            Refresh();
-            Thread.Sleep(1000);
-
-
-
-
-            Print.Play();
-            receiptLabel.Text += $"\n\n\nSubtotal:";
-            receiptLabelRight.Text += $"\n\n\n{itemsTotal.ToString("C")}";
-
-            Refresh();
-            Thread.Sleep(500);
-
-            Print.Play();
-            receiptLabel.Text += $"\n\nTax:";
-            receiptLabelRight.Text += $"\n\n{(itemsTotal * hst).ToString("C")}";
-
-            Refresh();
-            Thread.Sleep(500);
-
-            Print.Play();
-            receiptLabel.Text += $"\n\nTotal:";
-            receiptLabelRight.Text += $"\n\n{(itemsTotal * hst + itemsTotal).ToString("C")}";
-
-            Refresh();
-            Thread.Sleep(1000);
+                Refresh();
+                Thread.Sleep(1000);
 
 
 
 
-            Print.Play();
-            receiptLabel.Text += $"\n\n\nTendered:";
-            try
-            {
-                receiptLabelRight.Text += $"\n\n\n{Convert.ToDouble(tenderedBox.Text).ToString("C")}";
-            }
-            catch
-            {
-                receiptLabelRight.Text += $"\n\n\n{Convert.ToDouble(tendered).ToString("C")}";
-            }
-            Refresh();
-            Thread.Sleep(500);
+                Print.Play();
+                receiptLabel.Text += $"\n\n\nSubtotal:";
+                receiptLabelRight.Text += $"\n\n\n{itemsTotal.ToString("C")}";
 
-            Print.Play();
-            receiptLabel.Text += $"\n\nChange:";
-            receiptLabelRight.Text += $"\n\n{change.ToString("C")}";
+                Refresh();
+                Thread.Sleep(500);
 
-            Refresh();
-            Thread.Sleep(500);
+                Print.Play();
+                receiptLabel.Text += $"\n\nTax:";
+                receiptLabelRight.Text += $"\n\n{(itemsTotal * hst).ToString("C")}";
+
+                Refresh();
+                Thread.Sleep(500);
+
+                Print.Play();
+                receiptLabel.Text += $"\n\nTotal:";
+                receiptLabelRight.Text += $"\n\n{(itemsTotal * hst + itemsTotal).ToString("C")}";
+
+                Refresh();
+                Thread.Sleep(1000);
 
 
 
 
-            receiptLabel.Text += $"\n";
-            receiptLabelRight.Text += $"\n";
+                Print.Play();
+                receiptLabel.Text += $"\n\n\nTendered:";
+                try
+                {
+                    receiptLabelRight.Text += $"\n\n\n{Convert.ToDouble(tenderedBox.Text).ToString("C")}";
+                }
+                catch
+                {
+                    receiptLabelRight.Text += $"\n\n\n{Convert.ToDouble(tendered).ToString("C")}";
+                }
+                Refresh();
+                Thread.Sleep(500);
 
-            Refresh();
-            Thread.Sleep(500);
+                Print.Play();
+                receiptLabel.Text += $"\n\nChange:";
+                receiptLabelRight.Text += $"\n\n{change.ToString("C")}";
 
-            receiptLabel.Text += $"\n";
-            receiptLabelRight.Text += $"\n";
+                Refresh();
+                Thread.Sleep(500);
 
-            Refresh();
-            Thread.Sleep(500);
 
-            receiptLabel.Text += $"\n";
-            receiptLabelRight.Text += $"\n";
 
-            Refresh();
-            Thread.Sleep(500);
 
-            receiptLabel.Text += $"\n";
-            receiptLabelRight.Text += $"\n";
+                receiptLabel.Text += $"\n";
+                receiptLabelRight.Text += $"\n";
 
-            Refresh();
-            Thread.Sleep(500);
+                Refresh();
+                Thread.Sleep(500);
 
-            receiptLabel.Text += $"\n";
-            receiptLabelRight.Text += $"\n";
-            Refresh();
+                receiptLabel.Text += $"\n";
+                receiptLabelRight.Text += $"\n";
+
+                Refresh();
+                Thread.Sleep(500);
+
+                receiptLabel.Text += $"\n";
+                receiptLabelRight.Text += $"\n";
+
+                Refresh();
+                Thread.Sleep(500);
+
+                receiptLabel.Text += $"\n";
+                receiptLabelRight.Text += $"\n";
+
+                Refresh();
+                Thread.Sleep(500);
+
+                receiptLabel.Text += $"\n";
+                receiptLabelRight.Text += $"\n";
+                Refresh();
+            
+
+
 
 
         }
-
         private void newOrderButton_Click(object sender, EventArgs e)
         {
             //resets variables

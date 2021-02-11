@@ -76,7 +76,7 @@ namespace cashRegister
             // item1Box
             // 
             this.item1Box.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.item1Box.Location = new System.Drawing.Point(136, 40);
+            this.item1Box.Location = new System.Drawing.Point(136, 45);
             this.item1Box.Name = "item1Box";
             this.item1Box.Size = new System.Drawing.Size(32, 20);
             this.item1Box.TabIndex = 1;
@@ -85,7 +85,7 @@ namespace cashRegister
             // item2Box
             // 
             this.item2Box.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.item2Box.Location = new System.Drawing.Point(136, 82);
+            this.item2Box.Location = new System.Drawing.Point(136, 87);
             this.item2Box.Name = "item2Box";
             this.item2Box.Size = new System.Drawing.Size(32, 20);
             this.item2Box.TabIndex = 3;
@@ -107,7 +107,7 @@ namespace cashRegister
             // item3Box
             // 
             this.item3Box.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.item3Box.Location = new System.Drawing.Point(136, 125);
+            this.item3Box.Location = new System.Drawing.Point(136, 130);
             this.item3Box.Name = "item3Box";
             this.item3Box.Size = new System.Drawing.Size(32, 20);
             this.item3Box.TabIndex = 5;
@@ -287,7 +287,7 @@ namespace cashRegister
             // 
             this.item1Plus.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.item1Plus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.item1Plus.Location = new System.Drawing.Point(164, 40);
+            this.item1Plus.Location = new System.Drawing.Point(164, 45);
             this.item1Plus.Name = "item1Plus";
             this.item1Plus.Size = new System.Drawing.Size(12, 20);
             this.item1Plus.TabIndex = 20;
@@ -299,7 +299,7 @@ namespace cashRegister
             // 
             this.item1Minus.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.item1Minus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.item1Minus.Location = new System.Drawing.Point(174, 40);
+            this.item1Minus.Location = new System.Drawing.Point(174, 45);
             this.item1Minus.Name = "item1Minus";
             this.item1Minus.Size = new System.Drawing.Size(12, 20);
             this.item1Minus.TabIndex = 21;
@@ -311,7 +311,7 @@ namespace cashRegister
             // 
             this.item2Minus.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.item2Minus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.item2Minus.Location = new System.Drawing.Point(174, 82);
+            this.item2Minus.Location = new System.Drawing.Point(174, 87);
             this.item2Minus.Name = "item2Minus";
             this.item2Minus.Size = new System.Drawing.Size(12, 20);
             this.item2Minus.TabIndex = 23;
@@ -323,7 +323,7 @@ namespace cashRegister
             // 
             this.Item2Plus.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Item2Plus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Item2Plus.Location = new System.Drawing.Point(164, 82);
+            this.Item2Plus.Location = new System.Drawing.Point(164, 87);
             this.Item2Plus.Name = "Item2Plus";
             this.Item2Plus.Size = new System.Drawing.Size(12, 20);
             this.Item2Plus.TabIndex = 22;
@@ -335,7 +335,7 @@ namespace cashRegister
             // 
             this.item3Minus.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.item3Minus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.item3Minus.Location = new System.Drawing.Point(174, 125);
+            this.item3Minus.Location = new System.Drawing.Point(174, 130);
             this.item3Minus.Name = "item3Minus";
             this.item3Minus.Size = new System.Drawing.Size(12, 20);
             this.item3Minus.TabIndex = 25;
@@ -347,7 +347,7 @@ namespace cashRegister
             // 
             this.item3Plus.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.item3Plus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.item3Plus.Location = new System.Drawing.Point(164, 125);
+            this.item3Plus.Location = new System.Drawing.Point(164, 130);
             this.item3Plus.Name = "item3Plus";
             this.item3Plus.Size = new System.Drawing.Size(12, 20);
             this.item3Plus.TabIndex = 24;
