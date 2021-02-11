@@ -277,5 +277,25 @@ namespace cashRegister
         {
 
         }
+
+        private void errorLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void item3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cashRegister_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void item1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

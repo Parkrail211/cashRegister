@@ -65,11 +65,12 @@ namespace cashRegister
             // 
             this.item1.AutoSize = true;
             this.item1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.item1.Location = new System.Drawing.Point(46, 40);
+            this.item1.Location = new System.Drawing.Point(25, 40);
             this.item1.Name = "item1";
-            this.item1.Size = new System.Drawing.Size(73, 24);
+            this.item1.Size = new System.Drawing.Size(98, 24);
             this.item1.TabIndex = 0;
-            this.item1.Text = "Burritos";
+            this.item1.Text = "Burritos $5";
+            this.item1.Click += new System.EventHandler(this.item1_Click);
             // 
             // item1Box
             // 
@@ -91,11 +92,11 @@ namespace cashRegister
             // 
             this.item2.AutoSize = true;
             this.item2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.item2.Location = new System.Drawing.Point(51, 82);
+            this.item2.Location = new System.Drawing.Point(18, 82);
             this.item2.Name = "item2";
-            this.item2.Size = new System.Drawing.Size(62, 24);
+            this.item2.Size = new System.Drawing.Size(112, 24);
             this.item2.TabIndex = 2;
-            this.item2.Text = "Tacos";
+            this.item2.Text = "Tacos $2.50";
             // 
             // item3Box
             // 
@@ -109,14 +110,16 @@ namespace cashRegister
             // 
             this.item3.AutoSize = true;
             this.item3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.item3.Location = new System.Drawing.Point(42, 125);
+            this.item3.Location = new System.Drawing.Point(25, 125);
             this.item3.Name = "item3";
-            this.item3.Size = new System.Drawing.Size(75, 24);
+            this.item3.Size = new System.Drawing.Size(100, 24);
             this.item3.TabIndex = 4;
-            this.item3.Text = "Nachos";
+            this.item3.Text = "Nachos $3";
+            this.item3.Click += new System.EventHandler(this.item3_Click);
             // 
             // totalButton
             // 
+            this.totalButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.totalButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.totalButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.totalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -125,7 +128,7 @@ namespace cashRegister
             this.totalButton.Size = new System.Drawing.Size(193, 23);
             this.totalButton.TabIndex = 6;
             this.totalButton.Text = "Calculate Totals";
-            this.totalButton.UseVisualStyleBackColor = true;
+            this.totalButton.UseVisualStyleBackColor = false;
             this.totalButton.Click += new System.EventHandler(this.totalButton_Click);
             // 
             // subtotalLabelLeft
@@ -173,6 +176,7 @@ namespace cashRegister
             // 
             // changeButton
             // 
+            this.changeButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.changeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.changeButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.changeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -181,7 +185,7 @@ namespace cashRegister
             this.changeButton.Size = new System.Drawing.Size(193, 23);
             this.changeButton.TabIndex = 12;
             this.changeButton.Text = "Calculate Change";
-            this.changeButton.UseVisualStyleBackColor = true;
+            this.changeButton.UseVisualStyleBackColor = false;
             this.changeButton.Click += new System.EventHandler(this.changeButton_Click);
             // 
             // changeBoxLeft
@@ -211,6 +215,7 @@ namespace cashRegister
             // 
             // recieptButton
             // 
+            this.recieptButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.recieptButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.recieptButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.recieptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -219,7 +224,7 @@ namespace cashRegister
             this.recieptButton.Size = new System.Drawing.Size(193, 23);
             this.recieptButton.TabIndex = 16;
             this.recieptButton.Text = "Print Receipt";
-            this.recieptButton.UseVisualStyleBackColor = true;
+            this.recieptButton.UseVisualStyleBackColor = false;
             this.recieptButton.Click += new System.EventHandler(this.recieptButton_Click);
             // 
             // receiptLabelRight
@@ -246,6 +251,7 @@ namespace cashRegister
             // 
             // newOrderButton
             // 
+            this.newOrderButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.newOrderButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.newOrderButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.newOrderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -254,7 +260,7 @@ namespace cashRegister
             this.newOrderButton.Size = new System.Drawing.Size(193, 23);
             this.newOrderButton.TabIndex = 19;
             this.newOrderButton.Text = "New Order";
-            this.newOrderButton.UseVisualStyleBackColor = true;
+            this.newOrderButton.UseVisualStyleBackColor = false;
             this.newOrderButton.Click += new System.EventHandler(this.newOrderButton_Click);
             // 
             // item1Plus
@@ -350,17 +356,19 @@ namespace cashRegister
             this.errorLabel.AutoSize = true;
             this.errorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.errorLabel.ForeColor = System.Drawing.Color.Red;
-            this.errorLabel.Location = new System.Drawing.Point(298, 9);
+            this.errorLabel.Location = new System.Drawing.Point(270, 9);
             this.errorLabel.Name = "errorLabel";
-            this.errorLabel.Size = new System.Drawing.Size(166, 20);
+            this.errorLabel.Size = new System.Drawing.Size(216, 20);
             this.errorLabel.TabIndex = 28;
-            this.errorLabel.Text = "Please input numbers.";
+            this.errorLabel.Text = "Please input proper amounts.";
             this.errorLabel.Visible = false;
+            this.errorLabel.Click += new System.EventHandler(this.errorLabel_Click);
             // 
             // cashRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SandyBrown;
             this.ClientSize = new System.Drawing.Size(512, 462);
             this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.button1);
@@ -394,6 +402,7 @@ namespace cashRegister
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "cashRegister";
             this.Text = "Restaurante de Gran P";
+            this.Load += new System.EventHandler(this.cashRegister_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
