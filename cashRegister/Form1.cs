@@ -10,6 +10,11 @@ using System.Windows.Forms;
 using System.Threading;
 using System.Media;
 
+/* Parker Railton
+ * ICU3U
+ * Mr.T
+ * */
+
 namespace cashRegister
 {
     public partial class cashRegister : Form
@@ -25,7 +30,7 @@ namespace cashRegister
         int item3Amount;
         double hst = 0.13;
         double itemsTotal;
-        double tendered;
+        double tendered = 0;
         double change;
 
         //sets up printing sound effect
@@ -164,8 +169,14 @@ namespace cashRegister
 
             Print.Play();
             receiptLabel.Text += $"\n\n\nTendered:";
-            receiptLabelRight.Text += $"\n\n\n{Convert.ToDouble(tenderedBox.Text).ToString("C")}";
-
+            try
+            {
+                receiptLabelRight.Text += $"\n\n\n{Convert.ToDouble(tenderedBox.Text).ToString("C")}";
+            }
+            catch
+            {
+                receiptLabelRight.Text += $"\n\n\n{Convert.ToDouble(tendered).ToString("C")}";
+            }
             Refresh();
             Thread.Sleep(500);
 
@@ -228,7 +239,7 @@ namespace cashRegister
             subtotalLabelRight.Visible = false;
             changeBoxLeft.Visible = false;
             changeBoxRight.Visible = false;
-    
+
 
             //resets text boxes
             item1Box.Text = "0";
@@ -240,37 +251,69 @@ namespace cashRegister
         //plus and minus buttons for text boxes
         private void item1Plus_Click(object sender, EventArgs e)
         {
-            int itemBox1Amount = Convert.ToInt16(item1Box.Text);
-            itemBox1Amount++;
-            item1Box.Text = Convert.ToString(itemBox1Amount);
+            try
+            {
+                int itemBox1Amount = Convert.ToInt16(item1Box.Text);
+                itemBox1Amount++;
+                item1Box.Text = Convert.ToString(itemBox1Amount);
+            }
+            catch
+            {
+
+            }
         }
 
         private void item1Minus_Click(object sender, EventArgs e)
         {
-            int itemBox1Amount = Convert.ToInt16(item1Box.Text);
-            itemBox1Amount--;
-            item1Box.Text = Convert.ToString(itemBox1Amount);
+            try
+            {
+                int itemBox1Amount = Convert.ToInt16(item1Box.Text);
+                itemBox1Amount--;
+                item1Box.Text = Convert.ToString(itemBox1Amount);
+            }
+            catch
+            {
+
+            }
         }
 
         private void item2Minus_Click(object sender, EventArgs e)
         {
+            try { 
             int itemBox2Amount = Convert.ToInt16(item2Box.Text);
             itemBox2Amount--;
             item2Box.Text = Convert.ToString(itemBox2Amount);
+            }
+            catch
+            {
+
+            }
         }
 
         private void Item2Plus_Click(object sender, EventArgs e)
         {
+          try  { 
             int itemBox2Amount = Convert.ToInt16(item2Box.Text);
             itemBox2Amount++;
             item2Box.Text = Convert.ToString(itemBox2Amount);
+            }
+            catch
+            {
+
+            }
         }
 
         private void item3Plus_Click(object sender, EventArgs e)
         {
+            try { 
             int itemBox3Amount = Convert.ToInt16(item3Box.Text);
             itemBox3Amount++;
             item3Box.Text = Convert.ToString(itemBox3Amount);
+            }
+            catch
+            {
+
+            }
         }
 
         private void item3Minus_Click(object sender, EventArgs e)
@@ -282,16 +325,28 @@ namespace cashRegister
 
         private void button2_Click(object sender, EventArgs e)
         {
+            try { 
             int tenderedBoxAmount = Convert.ToInt16(tenderedBox.Text);
             tenderedBoxAmount++;
             tenderedBox.Text = Convert.ToString(tenderedBoxAmount);
+            }
+            catch
+            {
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            try { 
             int tenderedBoxAmount = Convert.ToInt16(tenderedBox.Text);
             tenderedBoxAmount--;
             tenderedBox.Text = Convert.ToString(tenderedBoxAmount);
+            }
+            catch
+            {
+
+            }
         }
 
 
