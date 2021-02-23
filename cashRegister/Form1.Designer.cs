@@ -31,10 +31,10 @@ namespace cashRegister
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cashRegister));
             this.item1 = new System.Windows.Forms.Label();
-            this.item1Box = new System.Windows.Forms.TextBox();
-            this.item2Box = new System.Windows.Forms.TextBox();
+            this.burritoBox = new System.Windows.Forms.TextBox();
+            this.tacoBox = new System.Windows.Forms.TextBox();
             this.item2 = new System.Windows.Forms.Label();
-            this.item3Box = new System.Windows.Forms.TextBox();
+            this.nachoBox = new System.Windows.Forms.TextBox();
             this.item3 = new System.Windows.Forms.Label();
             this.totalButton = new System.Windows.Forms.Button();
             this.subtotalLabelLeft = new System.Windows.Forms.Label();
@@ -49,82 +49,79 @@ namespace cashRegister
             this.receiptLabelRight = new System.Windows.Forms.Label();
             this.receiptSideLabel = new System.Windows.Forms.Label();
             this.newOrderButton = new System.Windows.Forms.Button();
-            this.item1Plus = new System.Windows.Forms.Button();
-            this.item1Minus = new System.Windows.Forms.Button();
-            this.item2Minus = new System.Windows.Forms.Button();
-            this.Item2Plus = new System.Windows.Forms.Button();
-            this.item3Minus = new System.Windows.Forms.Button();
-            this.item3Plus = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.burritoPlus = new System.Windows.Forms.Button();
+            this.burritoMinus = new System.Windows.Forms.Button();
+            this.tacoMinus = new System.Windows.Forms.Button();
+            this.tacoPlus = new System.Windows.Forms.Button();
+            this.nachoMinus = new System.Windows.Forms.Button();
+            this.nachoPlus = new System.Windows.Forms.Button();
+            this.tenderedMinus = new System.Windows.Forms.Button();
+            this.tenderedPlus = new System.Windows.Forms.Button();
             this.errorLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // item1
             // 
             this.item1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.item1.AutoSize = true;
             this.item1.BackColor = System.Drawing.Color.White;
             this.item1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.item1.Location = new System.Drawing.Point(25, 40);
+            this.item1.Location = new System.Drawing.Point(12, 39);
             this.item1.Name = "item1";
-            this.item1.Size = new System.Drawing.Size(100, 26);
+            this.item1.Size = new System.Drawing.Size(114, 26);
             this.item1.TabIndex = 0;
-            this.item1.Text = "Burritos $5";
+            this.item1.Text = "Burritos   $5";
             // 
-            // item1Box
+            // burritoBox
             // 
-            this.item1Box.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.item1Box.Location = new System.Drawing.Point(136, 45);
-            this.item1Box.Name = "item1Box";
-            this.item1Box.Size = new System.Drawing.Size(32, 20);
-            this.item1Box.TabIndex = 1;
-            this.item1Box.Text = "0";
+            this.burritoBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.burritoBox.Location = new System.Drawing.Point(136, 45);
+            this.burritoBox.Name = "burritoBox";
+            this.burritoBox.Size = new System.Drawing.Size(32, 20);
+            this.burritoBox.TabIndex = 1;
+            this.burritoBox.Text = "0";
             // 
-            // item2Box
+            // tacoBox
             // 
-            this.item2Box.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.item2Box.Location = new System.Drawing.Point(136, 87);
-            this.item2Box.Name = "item2Box";
-            this.item2Box.Size = new System.Drawing.Size(32, 20);
-            this.item2Box.TabIndex = 3;
-            this.item2Box.Text = "0";
+            this.tacoBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tacoBox.Location = new System.Drawing.Point(136, 87);
+            this.tacoBox.Name = "tacoBox";
+            this.tacoBox.Size = new System.Drawing.Size(32, 20);
+            this.tacoBox.TabIndex = 3;
+            this.tacoBox.Text = "0";
             // 
             // item2
             // 
             this.item2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.item2.AutoSize = true;
             this.item2.BackColor = System.Drawing.Color.White;
             this.item2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.item2.Location = new System.Drawing.Point(18, 82);
+            this.item2.Location = new System.Drawing.Point(12, 82);
             this.item2.Name = "item2";
             this.item2.Size = new System.Drawing.Size(114, 26);
             this.item2.TabIndex = 2;
             this.item2.Text = "Tacos $2.50";
             // 
-            // item3Box
+            // nachoBox
             // 
-            this.item3Box.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.item3Box.Location = new System.Drawing.Point(136, 130);
-            this.item3Box.Name = "item3Box";
-            this.item3Box.Size = new System.Drawing.Size(32, 20);
-            this.item3Box.TabIndex = 5;
-            this.item3Box.Text = "0";
+            this.nachoBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.nachoBox.Location = new System.Drawing.Point(136, 130);
+            this.nachoBox.Name = "nachoBox";
+            this.nachoBox.Size = new System.Drawing.Size(32, 20);
+            this.nachoBox.TabIndex = 5;
+            this.nachoBox.Text = "0";
             // 
             // item3
             // 
             this.item3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.item3.AutoSize = true;
             this.item3.BackColor = System.Drawing.Color.White;
             this.item3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.item3.Location = new System.Drawing.Point(25, 125);
+            this.item3.Location = new System.Drawing.Point(12, 123);
             this.item3.Name = "item3";
-            this.item3.Size = new System.Drawing.Size(102, 26);
+            this.item3.Size = new System.Drawing.Size(114, 26);
             this.item3.TabIndex = 4;
-            this.item3.Text = "Nachos $3";
+            this.item3.Text = "Nachos   $3";
             // 
             // totalButton
             // 
@@ -165,7 +162,7 @@ namespace cashRegister
             // tenderedBox
             // 
             this.tenderedBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tenderedBox.Location = new System.Drawing.Point(136, 318);
+            this.tenderedBox.Location = new System.Drawing.Point(136, 316);
             this.tenderedBox.Name = "tenderedBox";
             this.tenderedBox.Size = new System.Drawing.Size(32, 20);
             this.tenderedBox.TabIndex = 11;
@@ -174,13 +171,12 @@ namespace cashRegister
             // tenderedLabel
             // 
             this.tenderedLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tenderedLabel.AutoSize = true;
             this.tenderedLabel.BackColor = System.Drawing.Color.White;
             this.tenderedLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tenderedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tenderedLabel.Location = new System.Drawing.Point(25, 314);
+            this.tenderedLabel.Location = new System.Drawing.Point(12, 310);
             this.tenderedLabel.Name = "tenderedLabel";
-            this.tenderedLabel.Size = new System.Drawing.Size(96, 26);
+            this.tenderedLabel.Size = new System.Drawing.Size(114, 26);
             this.tenderedLabel.TabIndex = 10;
             this.tenderedLabel.Text = "Tendered";
             // 
@@ -283,101 +279,101 @@ namespace cashRegister
             this.newOrderButton.UseVisualStyleBackColor = false;
             this.newOrderButton.Click += new System.EventHandler(this.newOrderButton_Click);
             // 
-            // item1Plus
+            // burritoPlus
             // 
-            this.item1Plus.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.item1Plus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.item1Plus.Location = new System.Drawing.Point(164, 45);
-            this.item1Plus.Name = "item1Plus";
-            this.item1Plus.Size = new System.Drawing.Size(12, 20);
-            this.item1Plus.TabIndex = 20;
-            this.item1Plus.Text = "+";
-            this.item1Plus.UseVisualStyleBackColor = true;
-            this.item1Plus.Click += new System.EventHandler(this.item1Plus_Click);
+            this.burritoPlus.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.burritoPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.burritoPlus.Location = new System.Drawing.Point(164, 45);
+            this.burritoPlus.Name = "burritoPlus";
+            this.burritoPlus.Size = new System.Drawing.Size(12, 20);
+            this.burritoPlus.TabIndex = 20;
+            this.burritoPlus.Text = "+";
+            this.burritoPlus.UseVisualStyleBackColor = true;
+            this.burritoPlus.Click += new System.EventHandler(this.burritoPlus_Click);
             // 
-            // item1Minus
+            // burritoMinus
             // 
-            this.item1Minus.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.item1Minus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.item1Minus.Location = new System.Drawing.Point(174, 45);
-            this.item1Minus.Name = "item1Minus";
-            this.item1Minus.Size = new System.Drawing.Size(12, 20);
-            this.item1Minus.TabIndex = 21;
-            this.item1Minus.Text = "−";
-            this.item1Minus.UseVisualStyleBackColor = true;
-            this.item1Minus.Click += new System.EventHandler(this.item1Minus_Click);
+            this.burritoMinus.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.burritoMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.burritoMinus.Location = new System.Drawing.Point(174, 45);
+            this.burritoMinus.Name = "burritoMinus";
+            this.burritoMinus.Size = new System.Drawing.Size(12, 20);
+            this.burritoMinus.TabIndex = 21;
+            this.burritoMinus.Text = "−";
+            this.burritoMinus.UseVisualStyleBackColor = true;
+            this.burritoMinus.Click += new System.EventHandler(this.burritoMinus_Click);
             // 
-            // item2Minus
+            // tacoMinus
             // 
-            this.item2Minus.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.item2Minus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.item2Minus.Location = new System.Drawing.Point(174, 87);
-            this.item2Minus.Name = "item2Minus";
-            this.item2Minus.Size = new System.Drawing.Size(12, 20);
-            this.item2Minus.TabIndex = 23;
-            this.item2Minus.Text = "−";
-            this.item2Minus.UseVisualStyleBackColor = true;
-            this.item2Minus.Click += new System.EventHandler(this.item2Minus_Click);
+            this.tacoMinus.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tacoMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tacoMinus.Location = new System.Drawing.Point(174, 87);
+            this.tacoMinus.Name = "tacoMinus";
+            this.tacoMinus.Size = new System.Drawing.Size(12, 20);
+            this.tacoMinus.TabIndex = 23;
+            this.tacoMinus.Text = "−";
+            this.tacoMinus.UseVisualStyleBackColor = true;
+            this.tacoMinus.Click += new System.EventHandler(this.tacoMinus_Click);
             // 
-            // Item2Plus
+            // tacoPlus
             // 
-            this.Item2Plus.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.Item2Plus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Item2Plus.Location = new System.Drawing.Point(164, 87);
-            this.Item2Plus.Name = "Item2Plus";
-            this.Item2Plus.Size = new System.Drawing.Size(12, 20);
-            this.Item2Plus.TabIndex = 22;
-            this.Item2Plus.Text = "+";
-            this.Item2Plus.UseVisualStyleBackColor = true;
-            this.Item2Plus.Click += new System.EventHandler(this.Item2Plus_Click);
+            this.tacoPlus.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tacoPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tacoPlus.Location = new System.Drawing.Point(164, 87);
+            this.tacoPlus.Name = "tacoPlus";
+            this.tacoPlus.Size = new System.Drawing.Size(12, 20);
+            this.tacoPlus.TabIndex = 22;
+            this.tacoPlus.Text = "+";
+            this.tacoPlus.UseVisualStyleBackColor = true;
+            this.tacoPlus.Click += new System.EventHandler(this.tacoPlus_Click);
             // 
-            // item3Minus
+            // nachoMinus
             // 
-            this.item3Minus.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.item3Minus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.item3Minus.Location = new System.Drawing.Point(174, 130);
-            this.item3Minus.Name = "item3Minus";
-            this.item3Minus.Size = new System.Drawing.Size(12, 20);
-            this.item3Minus.TabIndex = 25;
-            this.item3Minus.Text = "−";
-            this.item3Minus.UseVisualStyleBackColor = true;
-            this.item3Minus.Click += new System.EventHandler(this.item3Minus_Click);
+            this.nachoMinus.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.nachoMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nachoMinus.Location = new System.Drawing.Point(174, 130);
+            this.nachoMinus.Name = "nachoMinus";
+            this.nachoMinus.Size = new System.Drawing.Size(12, 20);
+            this.nachoMinus.TabIndex = 25;
+            this.nachoMinus.Text = "−";
+            this.nachoMinus.UseVisualStyleBackColor = true;
+            this.nachoMinus.Click += new System.EventHandler(this.nachoMinus_Click);
             // 
-            // item3Plus
+            // nachoPlus
             // 
-            this.item3Plus.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.item3Plus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.item3Plus.Location = new System.Drawing.Point(164, 130);
-            this.item3Plus.Name = "item3Plus";
-            this.item3Plus.Size = new System.Drawing.Size(12, 20);
-            this.item3Plus.TabIndex = 24;
-            this.item3Plus.Text = "+";
-            this.item3Plus.UseVisualStyleBackColor = true;
-            this.item3Plus.Click += new System.EventHandler(this.item3Plus_Click);
+            this.nachoPlus.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.nachoPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nachoPlus.Location = new System.Drawing.Point(164, 130);
+            this.nachoPlus.Name = "nachoPlus";
+            this.nachoPlus.Size = new System.Drawing.Size(12, 20);
+            this.nachoPlus.TabIndex = 24;
+            this.nachoPlus.Text = "+";
+            this.nachoPlus.UseVisualStyleBackColor = true;
+            this.nachoPlus.Click += new System.EventHandler(this.nachoPlus_Click);
             // 
-            // button1
+            // tenderedMinus
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(174, 318);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(12, 20);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "−";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.tenderedMinus.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tenderedMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tenderedMinus.Location = new System.Drawing.Point(174, 316);
+            this.tenderedMinus.Name = "tenderedMinus";
+            this.tenderedMinus.Size = new System.Drawing.Size(12, 20);
+            this.tenderedMinus.TabIndex = 27;
+            this.tenderedMinus.Text = "−";
+            this.tenderedMinus.UseVisualStyleBackColor = true;
+            this.tenderedMinus.Click += new System.EventHandler(this.tenderedMinus_Click);
             // 
-            // button2
+            // tenderedPlus
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(164, 318);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(12, 20);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "+";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.tenderedPlus.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tenderedPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tenderedPlus.Location = new System.Drawing.Point(164, 316);
+            this.tenderedPlus.Name = "tenderedPlus";
+            this.tenderedPlus.Size = new System.Drawing.Size(12, 20);
+            this.tenderedPlus.TabIndex = 26;
+            this.tenderedPlus.Text = "+";
+            this.tenderedPlus.UseVisualStyleBackColor = true;
+            this.tenderedPlus.Click += new System.EventHandler(this.tenderedPlus_Click);
             // 
             // errorLabel
             // 
@@ -401,14 +397,14 @@ namespace cashRegister
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(512, 462);
             this.Controls.Add(this.errorLabel);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.item3Minus);
-            this.Controls.Add(this.item3Plus);
-            this.Controls.Add(this.item2Minus);
-            this.Controls.Add(this.Item2Plus);
-            this.Controls.Add(this.item1Minus);
-            this.Controls.Add(this.item1Plus);
+            this.Controls.Add(this.tenderedMinus);
+            this.Controls.Add(this.tenderedPlus);
+            this.Controls.Add(this.nachoMinus);
+            this.Controls.Add(this.nachoPlus);
+            this.Controls.Add(this.tacoMinus);
+            this.Controls.Add(this.tacoPlus);
+            this.Controls.Add(this.burritoMinus);
+            this.Controls.Add(this.burritoPlus);
             this.Controls.Add(this.newOrderButton);
             this.Controls.Add(this.receiptSideLabel);
             this.Controls.Add(this.receiptLabelRight);
@@ -422,11 +418,11 @@ namespace cashRegister
             this.Controls.Add(this.subtotalLabelRight);
             this.Controls.Add(this.subtotalLabelLeft);
             this.Controls.Add(this.totalButton);
-            this.Controls.Add(this.item3Box);
+            this.Controls.Add(this.nachoBox);
             this.Controls.Add(this.item3);
-            this.Controls.Add(this.item2Box);
+            this.Controls.Add(this.tacoBox);
             this.Controls.Add(this.item2);
-            this.Controls.Add(this.item1Box);
+            this.Controls.Add(this.burritoBox);
             this.Controls.Add(this.item1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "cashRegister";
@@ -439,10 +435,10 @@ namespace cashRegister
         #endregion
 
         private System.Windows.Forms.Label item1;
-        private System.Windows.Forms.TextBox item1Box;
-        private System.Windows.Forms.TextBox item2Box;
+        private System.Windows.Forms.TextBox burritoBox;
+        private System.Windows.Forms.TextBox tacoBox;
         private System.Windows.Forms.Label item2;
-        private System.Windows.Forms.TextBox item3Box;
+        private System.Windows.Forms.TextBox nachoBox;
         private System.Windows.Forms.Label item3;
         private System.Windows.Forms.Button totalButton;
         private System.Windows.Forms.Label subtotalLabelLeft;
@@ -457,14 +453,14 @@ namespace cashRegister
         private System.Windows.Forms.Label receiptLabelRight;
         private System.Windows.Forms.Label receiptSideLabel;
         private System.Windows.Forms.Button newOrderButton;
-        private System.Windows.Forms.Button item1Plus;
-        private System.Windows.Forms.Button item1Minus;
-        private System.Windows.Forms.Button item2Minus;
-        private System.Windows.Forms.Button Item2Plus;
-        private System.Windows.Forms.Button item3Minus;
-        private System.Windows.Forms.Button item3Plus;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button burritoPlus;
+        private System.Windows.Forms.Button burritoMinus;
+        private System.Windows.Forms.Button tacoMinus;
+        private System.Windows.Forms.Button tacoPlus;
+        private System.Windows.Forms.Button nachoMinus;
+        private System.Windows.Forms.Button nachoPlus;
+        private System.Windows.Forms.Button tenderedMinus;
+        private System.Windows.Forms.Button tenderedPlus;
         private System.Windows.Forms.Label errorLabel;
     }
 }

@@ -24,12 +24,12 @@ namespace cashRegister
 
         // Glabal Variables
 
-        double item1Price = 5;
-        double item2Price = 2.5;
-        double item3Price = 3;
-        int item1Amount;
-        int item2Amount;
-        int item3Amount;
+        double burritoPrice = 5;
+        double tacoPrice = 2.5;
+        double nachoPrice = 3;
+        int burritoAmount;
+        int tacoAmount;
+        int nachoAmount;
         double hst = 0.13;
         double itemsTotal;
         double tendered = 0;
@@ -59,11 +59,11 @@ namespace cashRegister
 
                 //takes value from text boxes
 
-                item1Amount = Convert.ToInt16(item1Box.Text);
-                item2Amount = Convert.ToInt16(item2Box.Text);
-                item3Amount = Convert.ToInt16(item3Box.Text);
+                burritoAmount = Convert.ToInt16(burritoBox.Text);
+                tacoAmount = Convert.ToInt16(tacoBox.Text);
+                nachoAmount = Convert.ToInt16(nachoBox.Text);
 
-                itemsTotal = (item1Price * item1Amount) + (item2Price * item2Amount) + (item3Price * item3Amount);
+                itemsTotal = (burritoPrice * burritoAmount) + (tacoPrice * tacoAmount) + (nachoPrice * nachoAmount);
 
                 //prints info
 
@@ -119,112 +119,92 @@ namespace cashRegister
         private void recieptButton_Click(object sender, EventArgs e)
         {
 
-            
+
             //shows receipt box
             receiptSideLabel.Visible = true;
-                receiptLabel.Visible = true;
-                receiptLabelRight.Visible = true;
+            receiptLabel.Visible = true;
+            receiptLabelRight.Visible = true;
 
-                //prints with sound
-                Print.Play();
-                receiptLabel.Text = $"\n\nBurritos  x{item1Amount} @";
-                receiptLabelRight.Text = $"\n\n{item1Price.ToString("C")}";
+            //prints with sound
+            Print.Play();
+            receiptLabel.Text = $"\n\nBurritos  x{burritoAmount} @";
+            receiptLabelRight.Text = $"\n\n{burritoPrice.ToString("C")}";
+            Refresh();
 
-                Refresh();
-                Thread.Sleep(500);
+            Thread.Sleep(500);
+            Print.Play();
+            receiptLabel.Text += $"\n\nTacos  x{tacoAmount} @";
+            receiptLabelRight.Text += $"\n\n{tacoPrice.ToString("C")}";
+            Refresh();
 
-                Print.Play();
-                receiptLabel.Text += $"\n\nTacos  x{item2Amount} @";
-                receiptLabelRight.Text += $"\n\n{item2Price.ToString("C")}";
+            Thread.Sleep(500);
+            Print.Play();
+            receiptLabel.Text += $"\n\nNachos  x{nachoAmount} @";
+            receiptLabelRight.Text += $"\n\n{nachoPrice.ToString("C")}";
+            Refresh();
 
-                Refresh();
-                Thread.Sleep(500);
+            Thread.Sleep(1000);
+            Print.Play();
+            receiptLabel.Text += $"\n\n\nSubtotal:";
+            receiptLabelRight.Text += $"\n\n\n{itemsTotal.ToString("C")}";
+            Refresh();
 
-                Print.Play();
-                receiptLabel.Text += $"\n\nNachos  x{item3Amount} @";
-                receiptLabelRight.Text += $"\n\n{item3Price.ToString("C")}";
+            Thread.Sleep(500);
+            Print.Play();
+            receiptLabel.Text += $"\n\nTax:";
+            receiptLabelRight.Text += $"\n\n{(itemsTotal * hst).ToString("C")}";
+            Refresh();
 
-                Refresh();
-                Thread.Sleep(1000);
+            Thread.Sleep(500);
+            Print.Play();
+            receiptLabel.Text += $"\n\nTotal:";
+            receiptLabelRight.Text += $"\n\n{(itemsTotal * hst + itemsTotal).ToString("C")}";
+            Refresh();
 
+            Thread.Sleep(1000);
+            Print.Play();
+            receiptLabel.Text += $"\n\n\nTendered:";
+            try
+            {
+                receiptLabelRight.Text += $"\n\n\n{Convert.ToDouble(tenderedBox.Text).ToString("C")}";
+            }
+            catch
+            {
+                receiptLabelRight.Text += $"\n\n\n{Convert.ToDouble(tendered).ToString("C")}";
+            }
+            Refresh();
 
+            Thread.Sleep(500);
+            Print.Play();
+            receiptLabel.Text += $"\n\nChange:";
+            receiptLabelRight.Text += $"\n\n{change.ToString("C")}";
+            Refresh();
 
+            Thread.Sleep(500);
+            receiptLabel.Text += $"\n";
+            receiptLabelRight.Text += $"\n";
+            Refresh();
 
-                Print.Play();
-                receiptLabel.Text += $"\n\n\nSubtotal:";
-                receiptLabelRight.Text += $"\n\n\n{itemsTotal.ToString("C")}";
+            Thread.Sleep(500);
+            receiptLabel.Text += $"\n";
+            receiptLabelRight.Text += $"\n";
+            Refresh();
 
-                Refresh();
-                Thread.Sleep(500);
+            Thread.Sleep(500);
+            receiptLabel.Text += $"\n";
+            receiptLabelRight.Text += $"\n";
+            Refresh();
 
-                Print.Play();
-                receiptLabel.Text += $"\n\nTax:";
-                receiptLabelRight.Text += $"\n\n{(itemsTotal * hst).ToString("C")}";
+            Thread.Sleep(500);
+            receiptLabel.Text += $"\n";
+            receiptLabelRight.Text += $"\n";
+            Refresh();
 
-                Refresh();
-                Thread.Sleep(500);
+            Thread.Sleep(500);
+            receiptLabel.Text += $"\n";
+            receiptLabelRight.Text += $"\n";
+            Refresh();
 
-                Print.Play();
-                receiptLabel.Text += $"\n\nTotal:";
-                receiptLabelRight.Text += $"\n\n{(itemsTotal * hst + itemsTotal).ToString("C")}";
-
-                Refresh();
-                Thread.Sleep(1000);
-
-
-
-
-                Print.Play();
-                receiptLabel.Text += $"\n\n\nTendered:";
-                try
-                {
-                    receiptLabelRight.Text += $"\n\n\n{Convert.ToDouble(tenderedBox.Text).ToString("C")}";
-                }
-                catch
-                {
-                    receiptLabelRight.Text += $"\n\n\n{Convert.ToDouble(tendered).ToString("C")}";
-                }
-                Refresh();
-                Thread.Sleep(500);
-
-                Print.Play();
-                receiptLabel.Text += $"\n\nChange:";
-                receiptLabelRight.Text += $"\n\n{change.ToString("C")}";
-
-                Refresh();
-                Thread.Sleep(500);
-
-
-
-
-                receiptLabel.Text += $"\n";
-                receiptLabelRight.Text += $"\n";
-
-                Refresh();
-                Thread.Sleep(500);
-
-                receiptLabel.Text += $"\n";
-                receiptLabelRight.Text += $"\n";
-
-                Refresh();
-                Thread.Sleep(500);
-
-                receiptLabel.Text += $"\n";
-                receiptLabelRight.Text += $"\n";
-
-                Refresh();
-                Thread.Sleep(500);
-
-                receiptLabel.Text += $"\n";
-                receiptLabelRight.Text += $"\n";
-
-                Refresh();
-                Thread.Sleep(500);
-
-                receiptLabel.Text += $"\n";
-                receiptLabelRight.Text += $"\n";
-                Refresh();
-            
 
 
 
@@ -233,9 +213,9 @@ namespace cashRegister
         private void newOrderButton_Click(object sender, EventArgs e)
         {
             //resets variables
-            item1Amount = 0;
-            item2Amount = 0;
-            item3Amount = 0;
+            burritoAmount = 0;
+            tacoAmount = 0;
+            nachoAmount = 0;
             itemsTotal = 0;
             tendered = 0;
             change = 0;
@@ -251,20 +231,20 @@ namespace cashRegister
 
 
             //resets text boxes
-            item1Box.Text = "0";
-            item2Box.Text = "0";
-            item3Box.Text = "0";
+            burritoBox.Text = "0";
+            tacoBox.Text = "0";
+            nachoBox.Text = "0";
             tenderedBox.Text = "0";
         }
 
         //plus and minus buttons for text boxes
-        private void item1Plus_Click(object sender, EventArgs e)
+        private void burritoPlus_Click(object sender, EventArgs e)
         {
             try
             {
-                int itemBox1Amount = Convert.ToInt16(item1Box.Text);
-                itemBox1Amount++;
-                item1Box.Text = Convert.ToString(itemBox1Amount);
+                int burritoBoxAmount = Convert.ToInt16(burritoBox.Text);
+                burritoBoxAmount++;
+                burritoBox.Text = Convert.ToString(burritoBoxAmount);
             }
             catch
             {
@@ -272,13 +252,13 @@ namespace cashRegister
             }
         }
 
-        private void item1Minus_Click(object sender, EventArgs e)
+        private void burritoMinus_Click(object sender, EventArgs e)
         {
             try
             {
-                int itemBox1Amount = Convert.ToInt16(item1Box.Text);
-                itemBox1Amount--;
-                item1Box.Text = Convert.ToString(itemBox1Amount);
+                int burritoBoxAmount = Convert.ToInt16(burritoBox.Text);
+                burritoBoxAmount--;
+                burritoBox.Text = Convert.ToString(burritoBoxAmount);
             }
             catch
             {
@@ -286,13 +266,13 @@ namespace cashRegister
             }
         }
 
-        private void item2Minus_Click(object sender, EventArgs e)
+        private void tacoMinus_Click(object sender, EventArgs e)
         {
             try
             {
-                int itemBox2Amount = Convert.ToInt16(item2Box.Text);
-                itemBox2Amount--;
-                item2Box.Text = Convert.ToString(itemBox2Amount);
+                int tacoBoxAmount = Convert.ToInt16(tacoBox.Text);
+                tacoBoxAmount--;
+                tacoBox.Text = Convert.ToString(tacoBoxAmount);
             }
             catch
             {
@@ -300,13 +280,13 @@ namespace cashRegister
             }
         }
 
-        private void Item2Plus_Click(object sender, EventArgs e)
+        private void tacoPlus_Click(object sender, EventArgs e)
         {
             try
             {
-                int itemBox2Amount = Convert.ToInt16(item2Box.Text);
-                itemBox2Amount++;
-                item2Box.Text = Convert.ToString(itemBox2Amount);
+                int tacoBoxAmount = Convert.ToInt16(tacoBox.Text);
+                tacoBoxAmount++;
+                tacoBox.Text = Convert.ToString(tacoBoxAmount);
             }
             catch
             {
@@ -314,13 +294,13 @@ namespace cashRegister
             }
         }
 
-        private void item3Plus_Click(object sender, EventArgs e)
+        private void nachoPlus_Click(object sender, EventArgs e)
         {
             try
             {
-                int itemBox3Amount = Convert.ToInt16(item3Box.Text);
-                itemBox3Amount++;
-                item3Box.Text = Convert.ToString(itemBox3Amount);
+                int nachoBoxAmount = Convert.ToInt16(nachoBox.Text);
+                nachoBoxAmount++;
+                nachoBox.Text = Convert.ToString(nachoBoxAmount);
             }
             catch
             {
@@ -328,14 +308,14 @@ namespace cashRegister
             }
         }
 
-        private void item3Minus_Click(object sender, EventArgs e)
+        private void nachoMinus_Click(object sender, EventArgs e)
         {
-            int itemBox3Amount = Convert.ToInt16(item3Box.Text);
-            itemBox3Amount--;
-            item3Box.Text = Convert.ToString(itemBox3Amount);
+            int nachoBoxAmount = Convert.ToInt16(nachoBox.Text);
+            nachoBoxAmount--;
+            nachoBox.Text = Convert.ToString(nachoBoxAmount);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void tenderedPlus_Click(object sender, EventArgs e)
         {
             try
             {
@@ -349,7 +329,7 @@ namespace cashRegister
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void tenderedMinus_Click(object sender, EventArgs e)
         {
             try
             {
